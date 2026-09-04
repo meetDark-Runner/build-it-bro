@@ -22,7 +22,7 @@ export function Hero() {
           🧠 AI-generated fictional entertainment · not a real personality test
         </span>
         <h1 className="mal text-chaos mt-6 text-4xl font-extrabold leading-tight sm:text-6xl">
-          ഇതിന് എന്താ തോന്നുന്നത്?
+          എനിക്ക് എന്താണ് തോന്നിയത്😏
         </h1>
         <p className="mal mt-5 text-base text-muted-foreground sm:text-lg">
           “ഒരു photo, video അല്ലെങ്കിൽ audio upload ചെയ്യൂ... അതിന് നിങ്ങളോട് പറയാനുള്ളത് കേൾക്കാം.”
