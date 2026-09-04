@@ -20,7 +20,7 @@ export function Hero() {
       >
         
         <h1 className="mal text-chaos mt-6 text-4xl font-extrabold leading-tight sm:text-6xl">
-          എനിക്ക് എന്താണ് തോന്നിയത്😏
+          എനിക്ക് തോന്നിയത് ഞൻ പറയാം 
         </h1>
         
       </motion.div>
