@@ -140,9 +140,7 @@ export function UploadZone({
               <p className="font-display text-lg font-semibold sm:text-xl">
                 {dragging ? "വിട്ടേക്ക്. ഞാൻ പിടിക്കാം. 🫴" : "Drag & drop anything here"}
               </p>
-              <p className="mal mt-1 text-sm text-muted-foreground">
-                Photo, video, voice note — എന്തും. ഞങ്ങൾ judge ചെയ്യില്ല. കുറച്ച് judge ചെയ്യും.
-              </p>
+              
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               <Button size="lg" onClick={() => openPicker("image")} disabled={reading}>
