@@ -18,15 +18,11 @@ export function Hero() {
         transition={{ duration: 0.7 }}
         className="mx-auto max-w-3xl text-center"
       >
-        <span className="glass mal inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium">
-          🧠 AI-generated fictional entertainment · not a real personality test
-        </span>
+        
         <h1 className="mal text-chaos mt-6 text-4xl font-extrabold leading-tight sm:text-6xl">
           എനിക്ക് എന്താണ് തോന്നിയത്😏
         </h1>
-        <p className="font-display mt-3 text-lg font-semibold sm:text-xl">
-          Upload anything. Give it a personality. Regret nothing.
-        </p>
+        
       </motion.div>
 
       <div className="relative mt-8 overflow-hidden">
