@@ -154,9 +154,7 @@ export function UploadZone({
               <Button size="lg" variant="secondary" onClick={() => openPicker("audio")} disabled={reading}>
                 <Mic className="size-4" /> 🎙️ Upload Audio
               </Button>
-              <Button size="lg" variant="outline" onClick={onSurprise} disabled={busy}>
-                🎲 Surprise Me
-              </Button>
+             
             </div>
           </div>
         ) : (
