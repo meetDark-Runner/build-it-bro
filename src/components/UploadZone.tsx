@@ -144,13 +144,13 @@ export function UploadZone({
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               <Button size="lg" onClick={() => openPicker("image")} disabled={reading}>
-                <Image className="size-4" /> 📸 Upload Photo
+                <Image className="size-4" />  Upload Photo
               </Button>
               <Button size="lg" variant="secondary" onClick={() => openPicker("video")} disabled={reading}>
-                <Video className="size-4" /> 🎥 Upload Video
+                <Video className="size-4" /> Upload Video
               </Button>
               <Button size="lg" variant="secondary" onClick={() => openPicker("audio")} disabled={reading}>
-                <Mic className="size-4" /> 🎙️ Upload Audio
+                <Mic className="size-4" />  Upload Audio
               </Button>
              
             </div>
