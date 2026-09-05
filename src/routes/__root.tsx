@@ -123,18 +123,4 @@ function RootComponent() {
       <Outlet />
     </QueryClientProvider>
   );
-  import React from 'react';
-
-export default function App() {
-  return (
-    <>
-      <audio
-        src="/eritnhut192-funny-sounds-363...mp3"
-        autoPlay
-        loop
-      />
-      {/* Your router or main components stay here */}
-    </>
-  );
-
 }
