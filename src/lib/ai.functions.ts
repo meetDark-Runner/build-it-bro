@@ -126,7 +126,7 @@ export const generateExtra = createServerFn({ method: "POST" })
     try {
       const style = data.memeStyle ? ` Meme personality style: ${data.memeStyle}.` : "";
       const text = await callAI([
-        { role: "system", content: PERSONA_SYSTEM.split("Reply with ONLY")[0] },
+        { role: "system", content: PERSONA_SYSTEM.split("Reply with ONLY")[0] ?? PERSONA_SYSTEM },
         {
           role: "user",
           content: `Here is the character:\n${data.persona}\n\nTask: ${MODE_PROMPT[data.mode]}${style}\nReply with plain text only, no JSON, no markdown.`,
@@ -153,7 +153,7 @@ export const chatWithCharacter = createServerFn({ method: "POST" })
       const msgs: Msg[] = [
         {
           role: "system",
-          content: `${PERSONA_SYSTEM.split("Reply with ONLY")[0]}
+          content: `${PERSONA_SYSTEM.split("Reply with ONLY")[0] ?? PERSONA_SYSTEM}
 You ARE this character now. Stay fully in character, never mention being an AI model. Reply in 1-3 short sentences of Manglish humour. Be dramatic, harmless, unhelpful.
 
 CHARACTER:

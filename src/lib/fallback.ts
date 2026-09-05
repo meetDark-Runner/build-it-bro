@@ -1,6 +1,6 @@
 import type { Persona } from "@/types";
 
-const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
+const pick = <T,>(a: T[]): T => a[Math.floor(Math.random() * a.length)] as T;
 const num = (min: number, max: number) => Math.floor(min + Math.random() * (max - min));
 
 const SUBJECTS = [
@@ -112,5 +112,5 @@ export function fallbackText(mode: string): string {
       "“ആ ചോദ്യത്തിന് ഉത്തരം ഉണ്ട്. പക്ഷേ ഞാൻ പറയില്ല. Drama വേണം.”",
     ],
   };
-  return pick(map[mode] ?? map.chat);
+  return pick(map[mode] ?? map["chat"] ?? []);
 }

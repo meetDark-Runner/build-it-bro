@@ -84,7 +84,7 @@ export function UploadZone({
     try {
       const previewUrl = URL.createObjectURL(file);
       const dataUrl = kind === "image" ? await shrinkImage(file) : undefined;
-      setPicked({ kind, file, previewUrl, dataUrl });
+      setPicked({ kind, file, previewUrl, ...(dataUrl ? { dataUrl } : {}) });
     } finally {
       setReading(false);
     }
