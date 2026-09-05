@@ -15,6 +15,7 @@ import { MemeGenerator } from "@/components/MemeGenerator";
 import { ExampleGallery, type Example } from "@/components/ExampleGallery";
 import { Footer } from "@/components/Footer";
 import { analyzeUpload, surpriseMe } from "@/lib/ai.functions";
+import memeSound from "@/assets/meme-sound.mp3.asset.json";
 import type { Persona, UploadKind } from "@/types";
 
 const TITLE = "ഇതിന് എന്താ തോന്നുന്നത്? — Give anything a personality";
@@ -48,6 +49,12 @@ function Index() {
   const resultRef = useRef<HTMLDivElement>(null);
 
   const finish = (p: Persona, isDegraded: boolean) => {
+    try {
+      const audio = new Audio(memeSound.url);
+      void audio.play().catch(() => {});
+    } catch {
+      /* audio blocked — ignore */
+    }
     setPersona(p);
     setDegraded(isDegraded);
     setPhase("result");
