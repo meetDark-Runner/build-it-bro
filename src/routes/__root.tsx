@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "ഇതിന് എന്താ തോന്നുന്നത്? — Fictional AI personality reader" },
+      { name: "description", content: "Upload any photo, video or audio and get a totally fictional personality, mood and backstory." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "ഇതിന് എന്താ തോന്നുന്നത്?" },
+      { property: "og:description", content: "A comedy AI that invents personalities for random objects." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
@@ -123,18 +123,4 @@ function RootComponent() {
       <Outlet />
     </QueryClientProvider>
   );
-  import React from 'react';
-
-export default function App() {
-  return (
-    <>
-      <audio
-        src="/eritnhut192-funny-sounds-363...mp3"
-        autoPlay
-        loop
-      />
-      {/* Your router or main components stay here */}
-    </>
-  );
-
 }

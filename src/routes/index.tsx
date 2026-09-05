@@ -133,7 +133,7 @@ function Index() {
               </motion.div>
             ) : (
               <motion.div key="upload" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                <UploadZone onAnalyze={runAnalyze} onSurprise={runSurprise} busy={phase === "analyzing"} />
+                <UploadZone onAnalyze={runAnalyze} onSurprise={runSurprise} busy={false} />
               </motion.div>
             )}
           </AnimatePresence>
@@ -172,7 +172,7 @@ function Index() {
 
             <div className="grid gap-6 lg:grid-cols-2">
               <CharacterChat persona={persona} />
-              <MemeGenerator persona={persona} imageUrl={previewUrl} />
+              <MemeGenerator persona={persona} {...(previewUrl ? { imageUrl: previewUrl } : {})} />
             </div>
 
             <div className="flex flex-wrap justify-center gap-2 pt-2">

@@ -27,7 +27,7 @@ export function MemeGenerator({
   const run = useServerFn(generateExtra);
   const [top, setTop] = useState(persona.memeTop);
   const [bottom, setBottom] = useState(persona.memeBottom);
-  const [style, setStyle] = useState(STYLES[0].id);
+  const [style, setStyle] = useState(STYLES[0]!.id);
   const [loading, setLoading] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
