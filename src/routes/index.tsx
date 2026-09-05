@@ -49,6 +49,12 @@ function Index() {
   const resultRef = useRef<HTMLDivElement>(null);
 
   const finish = (p: Persona, isDegraded: boolean) => {
+    try {
+      const audio = new Audio(memeSound.url);
+      void audio.play().catch(() => {});
+    } catch {
+      /* audio blocked — ignore */
+    }
     setPersona(p);
     setDegraded(isDegraded);
     setPhase("result");
