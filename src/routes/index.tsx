@@ -45,12 +45,16 @@ function Index() {
   const [previewUrl, setPreviewUrl] = useState<string | undefined>();
   const [degraded, setDegraded] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const busyRef = useRef(false);
   const resultRef = useRef<HTMLDivElement>(null);
 
   const finish = (p: Persona, isDegraded: boolean) => {
     try {
+      audioRef.current?.pause();
       const audio = new Audio(memeSound.url);
+      audio.loop = false;
+      audioRef.current = audio;
       void audio.play().catch(() => {});
     } catch {
       /* audio blocked — ignore */
