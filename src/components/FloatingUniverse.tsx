@@ -44,7 +44,7 @@ function makeFloaters(count: number): Floater[] {
     const depth = 0.3 + Math.random() * 0.9;
     return {
       id: i,
-      emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
+      emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)] ?? "✨",
       x: Math.random() * 92 + 2,
       y: Math.random() * 92 + 2,
       size: Math.round(20 + depth * 34),
@@ -100,7 +100,7 @@ export function FloatingUniverse() {
 
   const speak = (f: Floater) => {
     const pool = LINES[f.emoji] ?? GENERIC;
-    const text = pool[Math.floor(Math.random() * pool.length)];
+    const text = pool[Math.floor(Math.random() * pool.length)] ?? GENERIC[0]!;
     setBubble({ id: f.id, text });
     window.setTimeout(() => setBubble((b) => (b?.id === f.id ? null : b)), 2600);
   };
